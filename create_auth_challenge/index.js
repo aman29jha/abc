@@ -37,7 +37,7 @@ exports.handler = async (event = {}) => {
 
 // Send secret code over SMS via Amazon Simple Notification Service (SNS)
 async function sendSMSviaSNS(phoneNumber, passCode) {
-    const params = { "Message": passCode + " is the OTP for your Third Eye account verification.", "PhoneNumber": phoneNumber };
+    const params = { "Message": "<#>" + passCode + " is the OTP for your Third Eye account verification." + "JrgYxU2yI00", "PhoneNumber": phoneNumber };
     await sns.publish(params).promise();
 }
 
